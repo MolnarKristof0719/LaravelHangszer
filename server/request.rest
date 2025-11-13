@@ -1,0 +1,43 @@
+### változók
+@protocol = http://
+@hostname = localhost
+@port = 8000
+@host = {{protocol}}{{hostname}}:{{port}}
+### @token = 12|ibiwTdr77o8ppToh1tBxIkckBNb8ECjIjLgaweTaa757cdef
+
+### teszt
+get {{host}}/api/
+
+### get products
+GET {{host}}/api/instruments
+
+### get product by id
+get {{host}}/api/instruments/14
+
+### post products
+POST  {{host}}/api/instruments
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "fuvolaaaa",
+    "description": "szépen fütyüllt",
+    "brand": "adidasoj",
+    "price": 320,
+    "quantity": 201
+}
+
+### delete
+DELETE {{host}}/api/instruments/15
+Accept: application/json
+Content-Type: application/json
+
+### patch products
+PATCH   {{host}}/api/instruments/14
+Accept: application/json
+Content-Type: application/json
+
+{
+    "description": "Te ki vagy bogyó",
+    "price":8001
+}
